@@ -1,0 +1,212 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Garante que o body ocupe toda a tela e permita rolagem quando necessário */
+html,
+body {
+  height: 100%;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O conteúdo principal cresce para empurrar o footer para baixo */
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00bfff;
+}
+
+/* Seções */
+.section {
+  padding: 60px 0;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #00bfff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Hero */
+#home {
+  background-color: #1c1c1c; /* Cor de fundo fixa para o "home" (a seção com o texto digitado) */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+#typing {
+  font-size: 22px;
+  color: #00bfff;
+  font-family: "Fira Code", monospace;
+  min-height: 80px; /* Define uma altura mínima para evitar mudanças no layout */
+  overflow: hidden; /* Impede o crescimento do conteúdo para evitar mudanças no footer */
+  text-align: center;
+}
+
+/* Card de projetos */
+.project-card {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  color: #00bfff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Skills */
+/* Skills */
+.skills {
+  display: flex;
+  flex-direction: column; /* Alinha as categorias uma abaixo da outra */
+  align-items: center;
+  gap: 20px; /* Espaço entre cada categoria */
+}
+
+.skill {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+}
+
+.skill h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+.skill ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill li {
+  font-size: 18px;
+  color: #ccc;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill i {
+  font-size: 20px;
+  color: #00bfff;
+}
+
+/* Links e Botões */
+.btn {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #007b8a;
+}
+
+/*foto*/
+.foto-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espaço entre o texto e a foto */
+}
+
+.foto-perfil {
+  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 150px;
+  border-radius: 50%; /* Para deixar a foto redonda */
+  border: 3px solid #00bfff; /* Borda estilizada */
+  object-fit: cover; /* Garante que a imagem fique bem ajustada */
+}
+
+/* Footer sempre no final, mas sem sobrepor conteúdo */
+footer {
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+}
