@@ -34,7 +34,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%; /* Aumentei a largura para telas menores */
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -72,8 +72,8 @@ main {
 
 /* Seções */
 .section {
-  padding: 40px 0; /* Reduzi o padding para telas menores */
-  width: 90%; /* Aumentei a largura para telas menores */
+  padding: 40px 0;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -94,20 +94,20 @@ p {
 /* Hero */
 #home {
   background-color: #1c1c1c;
-  padding: 80px 0; /* Reduzi o padding para telas menores */
+  padding: 80px 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 36px; /* Reduzi o tamanho da fonte para telas menores */
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 #typing {
-  font-size: 18px; /* Reduzi o tamanho da fonte para telas menores */
+  font-size: 18px;
   color: #00bfff;
   font-family: "Fira Code", monospace;
-  min-height: 60px; /* Reduzi a altura mínima para telas menores */
+  min-height: 60px;
   overflow: hidden;
   text-align: center;
 }
@@ -117,7 +117,7 @@ p {
 .certificado-item {
   background-color: #222;
   padding: 20px;
-  margin-bottom: 20px; /* Reduzi a margem para telas menores */
+  margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -156,7 +156,7 @@ p {
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 90%; /* Aumentei a largura para telas menores */
+  width: 90%;
 }
 
 .skill h3 {
@@ -231,76 +231,87 @@ footer {
 
 /* Telas menores que 768px (tablets e smartphones) */
 @media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column; /* Alinha os itens da navbar verticalmente */
-    gap: 10px;
+  .menu-icon {
+    display: block; /* Mostra o ícone do menu sanduíche */
   }
 
   .navbar-links {
-    flex-direction: column; /* Alinha os links verticalmente */
+    display: none; /* Esconde os links da navbar */
+    flex-direction: column;
     gap: 10px;
+    position: absolute;
+    top: 60px; /* Ajuste conforme a altura da navbar */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Mostra os links quando o menu está ativo */
   }
 
   .section {
-    padding: 20px 0; /* Reduz o padding para telas menores */
+    padding: 20px 0;
   }
 
   h1,
   h2 {
-    font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 28px;
   }
 
   p {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 16px;
   }
 
   .hero h1 {
-    font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 28px;
   }
 
   #typing {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 16px;
   }
 
   .project-card,
   .certificado-item {
-    padding: 15px; /* Reduz o padding para telas menores */
+    padding: 15px;
   }
 
   .skill {
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 100%;
   }
 }
 
 /* Telas menores que 480px (smartphones pequenos) */
 @media (max-width: 480px) {
   .navbar-logo {
-    font-size: 20px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 20px;
   }
 
   .navbar-links a {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 16px;
   }
 
   h1,
   h2 {
-    font-size: 24px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 24px;
   }
 
   p {
-    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 14px;
   }
 
   .hero h1 {
-    font-size: 24px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 24px;
   }
 
   #typing {
-    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 14px;
   }
 
   .project-card,
   .certificado-item {
-    padding: 10px; /* Reduz o padding para telas menores */
+    padding: 10px;
   }
 }
