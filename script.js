@@ -11,20 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function typeText() {
     if (i < text[line].length) {
-      textElement.innerHTML += text[line].charAt(i);
+      textElement.innerHTML += text[line].charAt(i); // Adiciona o próximo caractere
       i++;
-      setTimeout(typeText, 100);
+      setTimeout(typeText, 100); // Intervalo entre cada caractere
     } else if (line < text.length - 1) {
       line++;
       i = 0;
       textElement.innerHTML += "<br>"; // Quebra de linha entre as frases
-      setTimeout(typeText, 500); // Pequena pausa antes de começar a próxima linha
+      setTimeout(typeText, 500); // Pausa antes de começar a próxima linha
     } else {
       setTimeout(() => {
-        textElement.innerHTML = ""; // Limpar o texto
-        line = 0; // Reiniciar a animação
+        textElement.innerHTML = ""; // Limpa o texto
+        line = 0; // Reinicia a animação
         i = 0;
-        setTimeout(typeText, 500); // Recomeçar a animação após um intervalo
+        setTimeout(typeText, 500); // Recomeça a animação após um intervalo
       }, 2000); // Pausa antes de reiniciar
     }
   }
