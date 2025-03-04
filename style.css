@@ -24,9 +24,10 @@ main {
 /* Navbar */
 .navbar {
   background-color: #333;
-  padding: 10px 0;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -45,6 +46,15 @@ main {
   text-decoration: none;
 }
 
+/* Ícone do menu sanduíche */
+.menu-icon {
+  display: none; /* Escondido em telas grandes */
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Links da Navbar */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -60,14 +70,6 @@ main {
 
 .navbar-links a:hover {
   color: #00bfff;
-}
-
-/* Ícone do menu sanduíche (inicialmente escondido) */
-.menu-icon {
-  display: none; /* Escondido em telas maiores */
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
 }
 
 /* Seções */
@@ -154,20 +156,23 @@ p {
   background-color: #222;
   padding: 20px;
   border-radius: 5px;
-  text-align: center;
+  text-align: left; /* Alinha o conteúdo à esquerda */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 90%;
+  max-width: 400px; /* Define um tamanho máximo para melhor alinhamento */
 }
 
 .skill h3 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #00bfff;
+  text-align: center; /* Mantém o título centralizado */
 }
 
 .skill ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .skill li {
@@ -177,12 +182,14 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start; /* Mantém os itens alinhados à esquerda */
 }
 
 .skill i {
   font-size: 20px;
   color: #00bfff;
+  min-width: 25px; /* Garante que o ícone tenha um tamanho fixo */
+  text-align: center;
 }
 
 /* Links e Botões */
@@ -238,14 +245,14 @@ footer {
   .navbar-links {
     display: none; /* Esconde os links da navbar */
     flex-direction: column;
-    gap: 10px;
     position: absolute;
     top: 60px; /* Ajuste conforme a altura da navbar */
     right: 0;
-    background-color: #333;
-    width: 100%;
+    background-color: #222;
+    width: 200px;
     padding: 10px 0;
     text-align: center;
+    border-radius: 5px;
   }
 
   .navbar-links.active {
