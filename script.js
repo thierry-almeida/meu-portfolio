@@ -31,4 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Iniciar animação assim que a página carregar
   typeText();
+
+  // Menu sanduíche
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+
+  // Adiciona um evento de clique ao ícone do menu
+  if (menuIcon && navbarLinks) {
+    menuIcon.addEventListener("click", () => {
+      navbarLinks.classList.toggle("active"); // Alterna a classe "active"
+    });
+  }
 });
